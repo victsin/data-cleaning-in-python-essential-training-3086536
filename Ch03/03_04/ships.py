@@ -5,7 +5,6 @@ df = pd.read_csv('ships.csv')
 df
 # %%
 import pandera as pa
-import numpy as np
 
 schema = pa.DataFrameSchema({
     'name': pa.Column(pa.String),
@@ -28,3 +27,4 @@ schema = pa.DataFrameSchema({
 })
 
 schema.validate(df)
+# %%
